@@ -1,0 +1,10 @@
+target=WBS
+classpath=/Users/sohanabel/git/veritesting/benchmarks/WBS/bin
+sourcepath=/Users/sohanabel/git/veritesting/benchmarks/WBS/src
+symbolic.method = WBS.mainProcess(sym#sym#sym#sym#sym#sym)
+symbolic.minint=-100
+symbolic.maxint=100
+vm.storage.class=nil
+listener = .symbc.VeritestingListener
+symbolic.dp=z3bitvector
+#listener = .listener.ChoiceTracker

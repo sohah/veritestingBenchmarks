@@ -1,0 +1,12 @@
+target=replace
+classpath=/Users/sohanabel/git/veritesting/benchmarks/repalce_11/bin
+sourcepath=/Users/sohanabel/git/veritesting/benchmarks/repalce_11/src
+symbolic.method = replace.mainProcess(sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym)
+symbolic.minint=-100
+symbolic.maxint=100
+vm.storage.class=nil
+listener = .symbc.SymbolicListener
+symbolic.dp=z3bitvector
+#listener = .listener.ChoiceTracker
+#symbolic.debug=on
+

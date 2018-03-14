@@ -1,0 +1,10 @@
+target=tcas
+classpath=/Users/sohanabel/git/veritesting/benchmarks/tcas/bin
+sourcepath=/Users/sohanabel/git/veritesting/benchmarks/tcas/src
+symbolic.method = tcas.mainProcess(sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym)
+symbolic.minint=-100
+symbolic.maxint=100
+vm.storage.class=nil
+listener = .symbc.VeritestingListener
+symbolic.dp=z3bitvector
+#listener = .listener.ChoiceTracker

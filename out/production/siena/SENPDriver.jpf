@@ -1,0 +1,12 @@
+target=SENPDriver
+classpath=/Users/sohanabel/git/veritesting/benchmarks/benchmarks/siena/bin
+sourcepath=/Users/sohanabel/git/veritesting/benchmarks/benchmarks/siena/src
+symbolic.method = SENPDriver.mainProcess(sym#sym#sym#sym#sym#sym#sym#sym#sym)
+symbolic.minint=-100
+symbolic.maxint=100
+vm.storage.class=nil
+listener = .symbc.VeritestingListener
+symbolic.dp=z3bitvector
+#listener = .listener.ChoiceTracker
+#symbolic.debug=on
+veritestingMode=3
