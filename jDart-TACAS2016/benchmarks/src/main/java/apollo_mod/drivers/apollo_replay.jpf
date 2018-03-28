@@ -1,0 +1,50 @@
+@include=../../config.jpf
+
+############################################################################### 
+#
+# default jdart tools
+#
+shell=gov.nasa.jpf.jdart.JDart
+symbolic.dp=dontknow
+
+#jdart.configs.all_fields_symbolic.symbolic.include=this.*
+
+############################################################################### 
+#
+# config
+#
+
+target=apollo_mod.drivers.JDartSPFDriver
+concolic.method.example=apollo_mod.rjc.RJCMain.DoSimSymbolic(in1_0:double, in1_1:double, in1_2:double, in2_0:double, in2_1:double, in2_2:double)
+
+concolic.method=example
+
+
+concolic.method.example.valfile=/home/luckow/work/coco/papers/jdart-doc/test_data/apollo/spf/testcases.txt
+#concolic.method.example.valfile=/home/luckow/code/java/benchmarks/values_tcas.txt
+#concolic.method.example.valfile=/home/luckow/work/coco/papers/jdart-doc/test_data/tcas/janala/jdart_test_values.txt
+
+
+jdart.tests.gen=true
+jdart.tests.pkg=apollo_mod.test.jdart.replay
+jdart.tests.dir=./src/main/java
+
+
+log.info=jdart
+jdart.tree.dont.print=true
+report.class=gov.nasa.jpf.report.Reporter
+report.publisher=console
+report.console.class=gov.nasa.jpf.report.ConsolePublisher
+report.console.start=jpf,sut
+report.console.transition=
+report.console.constraint=constraint,snapshot
+report.console.property_violation=error,snapshot
+report.console.show_steps=true
+report.console.show_method=true
+report.console.show_code=false
+report.console.finished=result,statistics
+
+
+listener=gov.nasa.jpf.listener.CoverageAnalyzer
+coverage.show_methods=true
+coverage.include = apollo_mod*

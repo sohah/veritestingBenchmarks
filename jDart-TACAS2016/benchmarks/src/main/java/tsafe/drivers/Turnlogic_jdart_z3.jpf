@@ -1,0 +1,43 @@
+@include=../../config.jpf
+
+############################################################################### 
+#
+# default jdart tools
+#
+shell=gov.nasa.jpf.jdart.JDart
+symbolic.dp=z3
+
+############################################################################### 
+#
+# config
+#
+
+target=tsafe.drivers.JDartSPF
+
+# method config jdart
+concolic.method.conflict=tsafe.TurnLogic.snippet(x1:double,x2:double,x3:double,x4:double,x5:double,x6:double,x7:double,x8:double)
+concolic.method=conflict
+
+
+jdart.tests.gen=true
+jdart.tests.pkg=tsafe.test.jdart.z3
+jdart.tests.dir=./src/main/java
+
+log.finest=jdart
+log.info=constraints
+jdart.tree.dont.print=true
+report.class=gov.nasa.jpf.report.Reporter
+report.publisher=console
+report.console.class=gov.nasa.jpf.report.ConsolePublisher
+report.console.start=jpf,sut
+report.console.transition=
+report.console.constraint=constraint,snapshot
+report.console.property_violation=error,snapshot
+report.console.show_steps=true
+report.console.show_method=true
+report.console.show_code=false
+report.console.finished=result,statistics
+
+listener=gov.nasa.jpf.listener.CoverageAnalyzer
+coverage.show_methods=true
+coverage.include = tsafe.TurnLogic

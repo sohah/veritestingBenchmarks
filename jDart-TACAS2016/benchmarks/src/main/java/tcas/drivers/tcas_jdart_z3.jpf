@@ -1,0 +1,42 @@
+@include=../../config.jpf
+
+############################################################################### 
+#
+# default jdart tools
+#
+shell=gov.nasa.jpf.jdart.JDart
+symbolic.dp=z3
+
+############################################################################### 
+#
+# config
+#
+
+target=tcas.drivers.JDartSPFDriver
+
+# method config jdart
+concolic.method.tcas=tcas.drivers.JDartSPFDriver.start_symbolic(cur_vertical_sep:int, high_confidence:int, two_of_three_reports_valid:int, own_tracked_alt:int, down_tracked_alt_rate:int,other_tracked_alt:int, alt_layer_value:int,up_separation:int, down_separation:int, other_rac:int, other_capability:int,climb_inhibit:int)
+concolic.method=tcas
+
+
+jdart.tests.gen=true
+jdart.tests.pkg=tcas.test.jdart.z3
+jdart.tests.dir=./src/main/java
+
+log.info=jdart
+jdart.tree.dont.print=true
+report.class=gov.nasa.jpf.report.Reporter
+report.publisher=console
+report.console.class=gov.nasa.jpf.report.ConsolePublisher
+report.console.start=jpf,sut
+report.console.transition=
+report.console.constraint=constraint,snapshot
+report.console.property_violation=error,snapshot
+report.console.show_steps=true
+report.console.show_method=true
+report.console.show_code=false
+report.console.finished=result,statistics
+
+listener=gov.nasa.jpf.listener.CoverageAnalyzer
+coverage.show_methods=true
+coverage.include = tcas.Tcas

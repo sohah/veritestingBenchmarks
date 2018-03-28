@@ -1,0 +1,45 @@
+@include=../../config.jpf
+
+############################################################################### 
+#
+# default jdart tools
+#
+shell=gov.nasa.jpf.jdart.JDart
+symbolic.dp=dontknow
+
+############################################################################### 
+#
+# config
+#
+
+target=wbs.drivers.JDartSPFDriver
+
+# method config jdart
+concolic.method.wbs=wbs.etg.WBS.update(PedalPos:int, AutoBrake:boolean, Skid:boolean)
+concolic.method=wbs
+
+#concolic.method.wbs.valfile=/home/luckow/work/coco/papers/jdart-doc/test_data/wbs/spf/testvalues.txt
+#concolic.method.wbs.valfile=/home/luckow/code/java/benchmarks/values_wbs.txt
+concolic.method.wbs.valfile=/home/luckow/work/coco/papers/jdart-doc/test_data/wbs/janala/jdart_test_values.txt
+
+jdart.tests.gen=true
+jdart.tests.pkg=wbs.test.jdart.replay
+jdart.tests.dir=./src/main/java
+
+log.info=jdart
+jdart.tree.dont.print=true
+report.class=gov.nasa.jpf.report.Reporter
+report.publisher=console
+report.console.class=gov.nasa.jpf.report.ConsolePublisher
+report.console.start=jpf,sut
+report.console.transition=
+report.console.constraint=constraint,snapshot
+report.console.property_violation=error,snapshot
+report.console.show_steps=true
+report.console.show_method=true
+report.console.show_code=false
+report.console.finished=result,statistics
+
+listener=gov.nasa.jpf.listener.CoverageAnalyzer
+coverage.show_methods=true
+coverage.include = wbs.etg*

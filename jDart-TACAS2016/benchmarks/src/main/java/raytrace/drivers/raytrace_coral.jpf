@@ -1,0 +1,39 @@
+@include=../../config.jpf
+
+############################################################################### 
+#
+# default jdart tools
+#
+shell=gov.nasa.jpf.jdart.JDart
+symbolic.dp=coral
+coral.solver=AVM
+coral.iterations=500
+coral.interval_solver=REALPAVER
+
+#jdart.configs.all_fields_symbolic.symbolic.include=this.*
+
+############################################################################### 
+#
+# config
+#
+
+target=raytrace.drivers.JDartSPFDriver
+
+# run individual
+
+concolic.method.surfaceshadewrap=raytrace.Surface.surfaceShadeWrap(rval:double,  gval:double,  bval:double,  a:double, d:double,  s:double,  n:double,  r:double,  t:double,  index:double,  pX:double, pY:double,  pZ:double,  nX:double,  nY:double,  nZ:double,  vX:double,  vY:double,vZ:double,  lType:int,  lX:double,  lY:double,  lZ:double,  lR:double,  lG:double, lB:double)
+concolic.method.surfaceshade=raytrace.Surface.surfaceShade(rval:float,  gval:float,  bval:float,  a:float, d:float,  s:float,  n:float,  r:float,  t:float,  index:float,  pX:float, pY:float,  pZ:float,  nX:float,  nY:float,  nZ:float,  vX:float,  vY:float,vZ:float,  lType:int,  lX:float,  lY:float,  lZ:float,  lR:float,  lG:float, lB:float)
+
+concolic.method=surfaceshade
+
+jdart.tests.gen=true
+jdart.tests.pkg=raytrace.test.jdart.coral
+jdart.tests.dir=./src/main/java
+
+log.info=jdart
+jdart.tree.dont.print=true
+# method config jdart
+
+listener=gov.nasa.jpf.listener.CoverageAnalyzer
+coverage.show_methods=true
+coverage.include = raytrace.*

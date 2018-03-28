@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+version = '1.0'
+group = 'jdart'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'JDart benchmarks',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+   flatDir {
+       dirs 'libs'
+   }
+}
+
+dependencies {
+    compile name: 'iagent'
+    compile name: 'jpf'
+    compile name: 'jcute'
+    compile name: 'LCT-2.2.0'
+    compile name: 'foundry-1.0'
+    compile name: 'JSAP-2.1'
+	compile 'junit:junit:4.12'
+}

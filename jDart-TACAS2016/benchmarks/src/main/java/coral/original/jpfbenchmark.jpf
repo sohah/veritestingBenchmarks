@@ -1,0 +1,111 @@
+############################################################################### 
+#
+# default jdart tools
+#
+shell=gov.nasa.jpf.jdart.JDart
+symbolic.dp=coral
+coral.solver=AVM
+coral.iterations=500
+coral.interval_solver=REALPAVER
+
+############################################################################### 
+#
+# logging and jpf output
+#
+log.finest=jdart
+#log.info=constraints
+
+# suppress jpf output
+report.console.start=
+report.console.finished=
+report.console.property_violation=
+
+
+
+jdart.configs.all_fields_symbolic.symbolic.include=this.*
+
+target=coral.original.JPFBenchmark
+
+# method config jdart
+classpath=bin
+#
+# run ALL benchmarks
+#
+concolic.method.runall=coral.original.JPFBenchmark.runAll(a:double, b:double, c:double, d:double, e:double, f:double, g:double, h:double, i:double, j:double, k:double, l:double, m:double, n:double, o:double, p:double, q:double, r:double, s:double, t:double, u:double, v:double, w:double, x:double, y:double, z:double);
+
+#
+# run individual benchmarks
+#
+concolic.method.testMethod1=coral.original.JPFBenchmark.benchmark01(x:double, y:double);
+concolic.method.testMethod2=coral.original.JPFBenchmark.benchmark02(x:double, y:double);
+	  concolic.method.testMethod3=coral.original.JPFBenchmark.benchmark03(x:double, y:double);
+	  concolic.method.testMethod4=coral.original.JPFBenchmark.benchmark04(x:double);
+	  concolic.method.testMethod5=coral.original.JPFBenchmark.benchmark05(x:double, y:double, z:double);
+	  concolic.method.testMethod6=coral.original.JPFBenchmark.benchmark06(x:double, y:double, z:double);
+	  concolic.method.testMethod7=coral.original.JPFBenchmark.benchmark07(x:double, y:double, z:double, w:double);
+	  concolic.method.testMethod8=coral.original.JPFBenchmark.benchmark08(x:double, y:double, z:double);
+	  concolic.method.testMethod9=coral.original.JPFBenchmark.benchmark09(x:double, y:double);
+	  concolic.method.testMethod10=coral.original.JPFBenchmark.benchmark10(x:double, y:double, z:double);
+	  concolic.method.testMethod11=coral.original.JPFBenchmark.benchmark11(x:double, y:double, z:double, w:double);
+	  concolic.method.testMethod12=coral.original.JPFBenchmark.benchmark12(x:double, y:double, z:double, w:double);
+	  concolic.method.testMethod13=coral.original.JPFBenchmark.benchmark13(x:double, y:double, z:double, w:double);
+	  concolic.method.testMethod14=coral.original.JPFBenchmark.benchmark14(x:double, y:double, z:double, w:double);
+	  concolic.method.testMethod15=coral.original.JPFBenchmark.benchmark15(x:double, y:double, z:double, w:double);
+	  concolic.method.testMethod16=coral.original.JPFBenchmark.benchmark16(x:double, y:double, z:double, w:double, v:double);
+	  concolic.method.testMethod17=coral.original.JPFBenchmark.benchmark17(x:double);
+	  concolic.method.testMethod18=coral.original.JPFBenchmark.benchmark18(x:double);
+	  concolic.method.testMethod19=coral.original.JPFBenchmark.benchmark19(x:double, y:double, z):double;
+	  concolic.method.testMethod20=coral.original.JPFBenchmark.benchmark20(x:double, y:double);
+	  concolic.method.testMethod21=coral.original.JPFBenchmark.benchmark21(x:double, y:double);
+	  concolic.method.testMethod22=coral.original.JPFBenchmark.benchmark22(x:double, y:double, z:double, w:double, v:double, t:double, q:double);
+	  concolic.method.testMethod23=coral.original.JPFBenchmark.benchmark23(x:double, y:double, z:double, w:double);
+	  
+	  
+	  concolic.method.testMethod25=coral.original.JPFBenchmark.benchmark25(x:double, y:double, z:double, w:double, v:double);
+	  concolic.method.testMethod26=coral.original.JPFBenchmark.benchmark26(x:double, y:double, z:double, w:double, v:double);
+	  concolic.method.testMethod27=coral.original.JPFBenchmark.benchmark27(x:double, y:double, z:double);
+	  concolic.method.testMethod29=coral.original.JPFBenchmark.benchmark29(x:double);
+	  concolic.method.testMethod32=coral.original.JPFBenchmark.benchmark32(x:double);
+	  concolic.method.testMethod33=coral.original.JPFBenchmark.benchmark33(x:double);
+	  concolic.method.testMethod34=coral.original.JPFBenchmark.benchmark34(x:double);
+	  concolic.method.testMethod35=coral.original.JPFBenchmark.benchmark35(x:double, y:double);
+	  concolic.method.testMethod38=coral.original.JPFBenchmark.benchmark38(x:double, y:double);
+	  concolic.method.testMethod39=coral.original.JPFBenchmark.benchmark39(x:double, y:double);
+	  concolic.method.testMethod40=coral.original.JPFBenchmark.benchmark40(x:double, y:double);
+	  concolic.method.testMethod41=coral.original.JPFBenchmark.benchmark41(x:double, y:double);
+	  concolic.method.testMethod42=coral.original.JPFBenchmark.benchmark42(x:double, y:double);
+	  concolic.method.testMethod43=coral.original.JPFBenchmark.benchmark43(x:double, y:double);
+	  concolic.method.testMethod44=coral.original.JPFBenchmark.benchmark44(x:double, y:double);
+	  concolic.method.testMethod45=coral.original.JPFBenchmark.benchmark45(x:double, y:double, z:double);
+	  concolic.method.testMethod46=coral.original.JPFBenchmark.benchmark46(x:double, y:double, z:double, w:double);
+	  concolic.method.testMethod47=coral.original.JPFBenchmark.benchmark47(x:double, y:double, z:double);
+	  concolic.method.testMethod48=coral.original.JPFBenchmark.benchmark48(x:double, y:double, z:double);
+	  concolic.method.testMethod49=coral.original.JPFBenchmark.benchmark49(x:double, y:double);
+	  concolic.method.testMethod50=coral.original.JPFBenchmark.benchmark50(x:double, y:double);
+	  concolic.method.testMethod52=coral.original.JPFBenchmark.benchmark52(x:double, y:double, z:double);
+	  concolic.method.testMethod53=coral.original.JPFBenchmark.benchmark53(x:double, y:double, z:double);
+	  concolic.method.testMethod56=coral.original.JPFBenchmark.benchmark56(x:double, y:double, :double, w:double, t:double);
+	  concolic.method.testMethod61=coral.original.JPFBenchmark.benchmark61(x:double, y:double, z:double, w:double);
+	  concolic.method.testMethod62=coral.original.JPFBenchmark.benchmark62(x:double, y:double, :double, w:double);
+	
+	  concolic.method.testMethod70=coral.original.JPFBenchmark.benchmark70(a:double, b:double, c:double, d:double, e:double, f:double, g:double, h:double, i:double, j:double, k:double, l:double, m:double, n:double, o:double, p:double, q:double, r:double, s:double, t:double, u:double, v:double, x:double, z:double);
+	  concolic.method.testMethod71=coral.original.JPFBenchmark.benchmark71(a:double, b:double, c:double, d:double, e:double, f:double, g:double, h:double, i:double, j:double, k:double, l:double);
+	  concolic.method.testMethod72=coral.original.JPFBenchmark.benchmark72(a:double, b:double, :double, d:double, e:double, :double, g:double);
+	  concolic.method.testMethod73=coral.original.JPFBenchmark.benchmark73(a:double, b:double, c:double, d:double, e:double, f:double, g:double, h:double, i:double, j:double);
+	  concolic.method.testMethod74=coral.original.JPFBenchmark.benchmark74(a:double, b:double, c:double, d:double, e:double, f:double, g:double, h:double);
+	  concolic.method.testMethod75=coral.original.JPFBenchmark.benchmark75(a:double, b:double, c:double, d:double, e:double, f:double, g:double, h:double, i:double);
+	  concolic.method.testMethod76=coral.original.JPFBenchmark.benchmark76(a:double, b:double, c:double, d:double, e:double, f:double, g:double, h:double, i:double);
+	  concolic.method.testMethod77=coral.original.JPFBenchmark.benchmark77(a:double, b:double, c:double, d:double, e:double, f:double, g:double, h:double, i:double, j:double);
+	  concolic.method.testMethod78=coral.original.JPFBenchmark.benchmark78(a:double, b:double, c:double, d:double, e:double, x:int, y:int, z:int);
+	  concolic.method.testMethod79=coral.original.JPFBenchmark.benchmark79(a:double, b:double, c:double, d:double, x:int);
+	  concolic.method.testMethod80=coral.original.JPFBenchmark.benchmark80(a:double, b:double);
+	  concolic.method.testMethod81=coral.original.JPFBenchmark.benchmark81(a:double, b:double);
+	  concolic.method.testMethod82=coral.original.JPFBenchmark.benchmark82(a:double, b:double);
+	  concolic.method.testMethod83=coral.original.JPFBenchmark.benchmark83(a:double, b:double);
+	  concolic.method.testMethod84=coral.original.JPFBenchmark.benchmark84(a:double, b:double, c:double, d:double);
+	  concolic.method.testMethod91=coral.original.JPFBenchmark.benchmark91(x:double, y:double);
+	  
+	  concolic.method.bitshift=coral.original.JPFBenchmark.benchmarkBitshift(param:long);
+
+concolic.method=runall
+#testmethod17

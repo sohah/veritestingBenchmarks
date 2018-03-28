@@ -1,0 +1,18 @@
+classpath=${user.home}/code/java/benchmarks/bin
+
+#symbolic.min_double=-100.0
+#symbolic.max_double=100.0
+symbolic.dp=coral
+coral.interval_solver=realpaver
+coral.solver=PSO_OPT4J
+coral.iterations=100
+coral.interval_solver=REALPAVER
+
+vm.storage.class=nil
+search.multiple_errors=true
+target=tsafe.drivers.JDartSPF
+symbolic.method=tsafe.TurnLogic.snippet(sym#sym#sym#sym#sym#sym#sym#sym)
+
+listener=gov.nasa.jpf.listener.CoverageAnalyzer,.symbc.TestValueGenerator
+coverage.show_methods=true
+coverage.include = tsafe.TurnLogic

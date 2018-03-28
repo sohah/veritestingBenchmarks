@@ -1,0 +1,19 @@
+classpath=${user.home}/code/java/benchmarks/bin
+
+symbolic.dp=z3
+
+
+target=minepump.product20.drivers.JDartSPFDriver
+
+
+symbolic.method=minepump.product20.Main.performActions3(sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym)
+
+listener=gov.nasa.jpf.listener.CoverageAnalyzer,.symbc.TestValueGenerator
+coverage.show_methods=true
+coverage.include = minepump*
+
+# no state matching	
+vm.storage.class=nil
+	
+# instruct jpf not to stop at first error
+search.multiple_errors=true

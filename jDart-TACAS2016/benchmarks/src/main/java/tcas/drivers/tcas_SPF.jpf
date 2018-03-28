@@ -1,0 +1,18 @@
+classpath=${user.home}/code/java/benchmarks/bin
+
+symbolic.dp=z3
+
+target=tcas.drivers.JDartSPFDriver
+
+# method config jdart
+symbolic.method=tcas.drivers.JDartSPFDriver.start_symbolic(sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym#sym)
+
+# no state matching	
+vm.storage.class=nil
+	
+# instruct jpf not to stop at first error
+search.multiple_errors=true
+
+listener=gov.nasa.jpf.listener.CoverageAnalyzer,.symbc.TestValueGenerator
+coverage.show_methods=true
+coverage.include = tcas.Tcas
