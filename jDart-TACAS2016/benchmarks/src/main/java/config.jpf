@@ -1,2 +1,0 @@
-@using = jpf-jdart
-classpath=${user.home}/code/java/benchmarks/bin

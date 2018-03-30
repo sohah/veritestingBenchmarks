@@ -1,6 +1,0 @@
-- MerArbiter
-MerArbiter models a component of the flight software for NASA JPL’s Mars Exploration Rovers (MER). The analyzed software consists of a Resource Arbiter and several user components. Each user serves one specific application, such as imaging, controlling the robot arm, communicating with earth, and driving. The arbiter module moderates access to several shared resources. It prevents potential conflicts between resource requests coming from different users and it enforces priorities. For example, it does not make sense to start a communication session with Earth while the rover is driving.
-
-MerArbiter has been modeled in Simulink/Stateflow and it was automatically translated into Java using the Polyglot framework. The configuration for our analysis involved two users and five resources. The example has 268 classes, 553 methods, 4697 lines of code (including the Java Polyglot execution framework).
-
-There were no version histories available for MerArbiter. We randomly picked two methods from the original version v0, and manually introduced the changes. Version v1 has a change to the return value in the method guard of class Transition300, and version v2 has an operator change from “==” to “! =” in the method guard of class Transition186.
