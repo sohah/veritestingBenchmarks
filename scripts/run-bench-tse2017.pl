@@ -19,8 +19,14 @@ if (not exists $known_benchmarks{$benchmark}) {
 
 my($driver_class, $driver_method) = @{$known_benchmarks{$benchmark}};
 
-if ($mode ne "vanilla" and $mode ne "ranger") {
-    die "Unrecognized mode '$mode': should be 'vanilla' or 'ranger'\n";
+if ($mode ne "vanilla" and $mode !~ /^ranger(\d+)$/) {
+    die "Unrecognized mode '$mode': should be 'vanilla' or 'ranger<N>'\n";
+}
+
+my $sub_mode;
+if ($mode =~ /^ranger(\d+)$/) {
+    $sub_mode = $1;
+    $mode = "ranger";
 }
 
 if ($size ne int($size) or $size < 1 or $size > 9) {
@@ -114,7 +120,7 @@ if ($mode eq "vanilla") {
     print CTRL "listener = .symbc.SymbolicListener\n";
 } elsif ($mode eq "ranger") {
     print CTRL "listener = .symbc.VeritestingListener\n";
-    print CTRL "veritestingMode = 3\n";
+    print CTRL "veritestingMode = $sub_mode\n";
 } else {
     die;
 }
