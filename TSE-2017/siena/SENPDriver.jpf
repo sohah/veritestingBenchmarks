@@ -1,7 +1,8 @@
 target=SENPDriver
-classpath=/Users/sohanabel/git/veritesting/benchmarks/benchmarks/siena/bin
-sourcepath=/Users/sohanabel/git/veritesting/benchmarks/benchmarks/siena/src
-symbolic.method = SENPDriver.mainProcess(sym#sym#sym#sym#sym#sym#sym#sym#sym)
+classpath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/siena
+sourcepath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/siena/src
+#symbolic.method = SENPDriver.mainProcess(sym#sym#sym#sym#sym#sym#sym#sym#sym)
+symbolic.method = SENPDriver.mainProcess(sym#con#con#con#con#con#con#con#con)
 symbolic.minint=-100
 symbolic.maxint=100
 vm.storage.class=nil
