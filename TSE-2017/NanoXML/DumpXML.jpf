@@ -1,0 +1,13 @@
+target=DumpXML
+classpath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/NanoXML
+sourcepath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/NanoXML/src
+#symbolic.method = DumpXML.mainProcess(sym#sym#sym#sym#sym#sym#sym#sym#sym)
+symbolic.method = DumpXML.mainProcess(sym#con#con#con#con#con#con#con#con)
+symbolic.minint=-100
+symbolic.maxint=100
+vm.storage.class=nil
+listener = .symbc.VeritestingListener
+symbolic.dp=z3bitvector
+#listener = .listener.ChoiceTracker
+#symbolic.debug=on
+veritestingMode=4

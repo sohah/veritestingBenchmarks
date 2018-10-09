@@ -1,0 +1,13 @@
+target=CLI
+classpath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/ApacheCLI
+sourcepath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/ApacheCLI/src
+#symbolic.method = CLI.mainProcess(sym#sym#sym#sym#sym#sym#sym#sym#sym)
+symbolic.method = CLI.mainProcess(sym#con#con#con#con#con#con#con#con)
+symbolic.minint=-100
+symbolic.maxint=100
+vm.storage.class=nil
+listener = .symbc.VeritestingListener
+symbolic.dp=z3bitvector
+#listener = .listener.ChoiceTracker
+#symbolic.debug=on
+veritestingMode=4
