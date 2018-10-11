@@ -6,6 +6,7 @@ symbolic.method = DumpXML.mainProcess(sym#con#con#con#con#con#con#con#con)
 symbolic.minint=-100
 symbolic.maxint=100
 vm.storage.class=nil
+#listener = .symbc.VeritestingListener
 listener = .symbc.VeritestingListener
 symbolic.dp=z3bitvector
 #listener = .listener.ChoiceTracker

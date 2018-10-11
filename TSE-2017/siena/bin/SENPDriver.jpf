@@ -1,5 +1,5 @@
 target=SENPDriver
-classpath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/siena
+classpath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/siena/bin
 sourcepath=/Users/sohanabel/git/veritestingBenchmarks/TSE-2017/siena/src
 #symbolic.method = SENPDriver.mainProcess(sym#sym#sym#sym#sym#sym#sym#sym#sym)
 symbolic.method = SENPDriver.mainProcess(sym#con#con#con#con#con#con#con#con)
